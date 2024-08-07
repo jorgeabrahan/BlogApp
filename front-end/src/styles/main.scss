@@ -1,0 +1,42 @@
+@use "sass:map";
+
+/* 1. import variables */
+@import './variables/colors';
+/* 2. import global styles */
+@import './global/main-actionable';
+@import './global/service-actionable';
+@import './global/layout';
+/* 3. import components */
+@import './components/navbar';
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  text-align: inherit;
+  font-size: inherit;
+  font-family: inherit;
+}
