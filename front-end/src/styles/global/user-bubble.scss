@@ -1,0 +1,32 @@
+.user-name-bubble {
+  padding: 0.8rem;
+  width: max-content;
+
+  color: white;
+  background-color: map.get($athens-gray, "950");
+  transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
+
+  border: 1px solid map.get($athens-gray, "100");
+  border-radius: 9999px;
+
+  font-weight: 600;
+  font-size: 1.1rem;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: 0 0 0 0.3rem map.get($athens-gray, "200");
+  }
+  &:active {
+    transform: scale(0.95);
+  }
+}
+
+.user-name-bubble--bigger {
+  font-size: 2rem;
+  padding: 1.2rem;
+}
+
+.user-name-bubble--small {
+  font-size: 0.875rem;
+  padding: 0.6rem;
+}

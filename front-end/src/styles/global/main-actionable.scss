@@ -1,60 +1,26 @@
 .main-actionable {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-
-  font-size: 1rem;
-  font-weight: 600;
-  text-align: center;
-  cursor: pointer;
-
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
-
-  border-radius: 1rem;
-  border: none;
-
-  transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
   border: 1px solid map.get($athens-gray, "100");
 }
 
 .main-actionable--flat {
-  background-color: map.get($azure-radiance, "500");
   color: white;
-  border: 1px solid map.get($athens-gray, "100");
+  background-color: map.get($athens-gray, "950");
 
-  &:hover {
-    background-color: map.get($azure-radiance, "600");
-  }
-  &:active {
-    background-color: map.get($azure-radiance, "700");
-  }
   &:disabled {
-    background-color: map.get($azure-radiance, "100");
-    color: map.get($azure-radiance, "400");
+    background-color: map.get($athens-gray, "100");
+    color: map.get($athens-gray, "500");
     cursor: not-allowed;
   }
 }
 
 .main-actionable--outline {
   background-color: white;
-  color: map.get($azure-radiance, "500");
-  border: 1px solid map.get($azure-radiance, "500");
+  color: map.get($athens-gray, "950");
+  border: 1px solid map.get($athens-gray, "950");
 
-  &:hover {
-    color: map.get($azure-radiance, "700");
-    border: 1px solid map.get($azure-radiance, "700");
-  }
-  &:active {
-    color: map.get($azure-radiance, "800");
-    border: 1px solid map.get($azure-radiance, "800");
-  }
   &:disabled {
-    color: map.get($azure-radiance, "200");
-    border: 1px solid map.get($azure-radiance, "200");
+    color: map.get($athens-gray, "300");
+    border: 1px solid map.get($athens-gray, "300");
     cursor: not-allowed;
   }
 }

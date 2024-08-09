@@ -1,0 +1,107 @@
+.input-wrapper {
+  position: relative;
+}
+
+.input-wrapper label {
+  position: absolute;
+  top: 0;
+  transform: translateY(-50%);
+  left: 1.5rem;
+  padding-inline: 0.2rem;
+  color: map.get($athens-gray, "800");
+  background: white;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.input-wrapper input, .input-wrapper textarea {
+  width: 100%;
+  padding-block: 0.8rem;
+  padding-inline: 1.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: map.get($athens-gray, "950");
+  border: 1px solid map.get($athens-gray, "950");
+  border-radius: 2rem;
+  outline: none;
+}
+
+.input-blog-title, .input-blog-textarea, .input-blog-content {
+  width: 100%;
+  border: none;
+  outline: none;
+  padding-inline: 1rem;
+}
+
+.input-blog-title {
+  font-size: 2.4rem;
+  font-family: "DM Serif Display", serif;
+  padding-block: 1.4rem;
+  border-left: 1px solid white;
+  &:active, &:focus {
+    border-left: 1px solid map.get($athens-gray, "950");
+  }
+}
+
+.input-blog-textarea {
+  font-size: 1.2rem;
+  padding-block: 1rem;
+  color: map.get($athens-gray, "800");
+  border-left: 1px solid white;
+  &:active, &:focus {
+    border-left: 1px solid map.get($athens-gray, "950");
+  }
+}
+
+.input-blog-content {
+  font-size: 1rem;
+  padding-block: 1rem;
+  color: map.get($athens-gray, "950");
+  resize: vertical;
+  border-left: 1px solid white;
+  line-height: 1.5;
+  &:active, &:focus {
+    border-left: 1px solid map.get($athens-gray, "950");
+  }
+}
+
+.input-blog-tags {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  border-radius: 1.5rem;
+  transition: box-shadow 0.3s ease-in-out;
+  &:hover {
+    box-shadow: 0 0 0 0.25rem map.get($athens-gray, '200');
+  }
+}
+.input-blog-tags input {
+  font-size: 0.9rem;
+  font-weight: 600;
+
+  padding-block: 0.5rem;
+  padding-inline: 1rem;
+
+  border-top-left-radius: 1.5rem;
+  border-bottom-left-radius: 1.5rem;
+  
+  border: 1px solid map.get($athens-gray, "950");
+  outline: none;
+}
+.input-blog-tags button {
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+
+  border-top-right-radius: 1.5rem;
+  border-bottom-right-radius: 1.5rem;
+  border: 1px solid map.get($athens-gray, "950");
+  background-color: map.get($athens-gray, "950");
+  color: white;
+}

@@ -1,0 +1,14 @@
+.link {
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.895rem;
+  color: map.get($azure-radiance, '700');
+
+  &:hover {
+    color: map.get($azure-radiance, '600');
+  }
+  &:active {
+    color: map.get($azure-radiance, '500');
+  }
+}
+

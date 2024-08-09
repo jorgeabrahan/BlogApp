@@ -1,0 +1,28 @@
+.modal-layout {
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+
+  border: none;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 0.6rem map.get($athens-gray, "200");
+
+  width: 100%;
+  max-width: 450px;
+
+  padding-bottom: 4rem;
+}
+
+.modal-layout__action--close {
+  display: block;
+  margin-left: auto;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+
+.modal__title {
+  font-size: 2rem;
+  text-align: center;
+  font-family: "DM Serif Display", serif;
+  margin-bottom: 2rem;
+}
