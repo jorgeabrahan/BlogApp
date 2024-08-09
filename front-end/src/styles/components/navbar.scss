@@ -3,7 +3,8 @@
   align-items: center;
   justify-content: space-between;
 
-  padding: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .navbar-logo {
@@ -18,33 +19,11 @@
   font-weight: 400;
 }
 
-.navbar-user-name {
+.user-name {
   position: relative;
 }
 
-.navbar-user-name__bubble {
-  padding: 0.8rem;
-
-  color: white;
-  background-color: map.get($athens-gray, "950");
-  transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
-
-  border: 1px solid map.get($athens-gray, "100");
-  border-radius: 9999px;
-
-  font-weight: 600;
-  font-size: 1.1rem;
-  cursor: pointer;
-
-  &:hover {
-    box-shadow: 0 0 0 0.3rem map.get($athens-gray, "200");
-  }
-  &:active {
-    transform: scale(0.95);
-  }
-}
-
-.navbar-user-name__menu {
+.user-name__menu {
   position: absolute;
   top: calc(100% + 0.8rem);
   right: 0;
@@ -80,36 +59,6 @@
   }
 }
 
-.authentication-modal {
-  top: 50%;
-  left: 50%;
-  transform: translateX(-50%) translateY(-50%);
-
-  border: none;
-  border-radius: 0.5rem;
-  box-shadow: 0 0 0.6rem map.get($athens-gray, "200");
-
-  width: 100%;
-  max-width: 450px;
-}
-
-.authentication-modal__action--close {
-  display: block;
-  margin-left: auto;
-  cursor: pointer;
-}
-
-.authentication-modal__content {
-  padding-top: 1rem;
-}
-
-.authentication-modal__title {
-  font-size: 2rem;
-  text-align: center;
-  font-family: "DM Serif Display", serif;
-  margin-bottom: 2rem;
-}
-
 .authentication-modal__actions {
   display: flex;
   flex-direction: column;
@@ -117,22 +66,15 @@
   gap: 0.6rem;
 }
 
-.authentication-modal__action--switch-tabs {
-  font-size: 0.9rem;
-  color: map-get($athens-gray, "700");
-  text-align: center;
-
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+.authentication-modal__actions button {
+  position: relative;
+  width: 100%;
+  max-width: 300px;
 }
 
-.authentication-modal__action--switch-tabs button {
-  font-weight: 700;
-  color: map-get($azure-radiance, "700");
-  transition: color 0.2s ease-in-out;
-  cursor: pointer;
-
-  &:hover {
-    color: map-get($azure-radiance, "600");
-  }
+.authentication-modal__actions button svg {
+  position: absolute;
+  top: 50%;
+  left: 1rem;
+  transform: translateY(-50%);
 }

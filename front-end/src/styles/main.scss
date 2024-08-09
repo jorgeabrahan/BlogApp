@@ -3,11 +3,23 @@
 /* 1. import variables */
 @import './variables/colors';
 /* 2. import global styles */
+@import './global/link';
+@import './global/actionable';
 @import './global/main-actionable';
-@import './global/service-actionable';
 @import './global/layout';
+@import './global/modal-layout';
+@import './global/user-bubble';
+@import './global/input';
 /* 3. import components */
 @import './components/navbar';
+/* 4. import pages */
+@import './pages/home';
+@import './pages/profile';
+@import './pages/write-blog';
+@import './pages/view-blog';
+/* 5. import utility */
+@import './utility/font';
+@import './utility/margin-padding';
 
 *, *::before, *::after {
   box-sizing: border-box;
@@ -39,4 +51,11 @@ button {
   text-align: inherit;
   font-size: inherit;
   font-family: inherit;
+}
+
+textarea {
+  resize: none;
+  font-family: Arial;
+  font-size: inherit;
+  text-align: inherit;
 }
