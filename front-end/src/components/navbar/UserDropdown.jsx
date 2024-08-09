@@ -7,12 +7,12 @@ export const UserDropdown = () => {
   const user = useSelector((state) => state.auth.user)
   const [isUserDropdownOpen, setIsUserDropdownOpen] = useState(false)
   return (
-    <div className='navbar-user-name'>
+    <div className='user-name'>
       <button
-        className='navbar-user-name__bubble'
+        className='user-name-bubble'
         onClick={() => setIsUserDropdownOpen((prevIsUserDropdownOpen) => !prevIsUserDropdownOpen)}
       >
-        {getNameInitials(user?.displayName ?? 'Jorge Siguenza')}
+        {getNameInitials(user?.name ?? '')}
       </button>
       {isUserDropdownOpen && (
         <UserDropdownMenu />

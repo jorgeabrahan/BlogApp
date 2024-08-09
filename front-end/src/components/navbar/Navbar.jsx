@@ -5,7 +5,7 @@ import { MainActionable } from '../actionables/MainActionable'
 import { MAIN_ACTIONABLE_STYLES } from '../../lib/utils/constants'
 import { SphereIcon } from '../../icons'
 import { UserDropdown } from './UserDropdown'
-import { AuthenticationModal } from './AuthenticationModal'
+import { AuthenticationModal } from '../../modals'
 
 export const Navbar = () => {
   const isAuthenticated = useSelector((state) => state.auth.isAuthenticated)
