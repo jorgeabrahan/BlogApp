@@ -1,13 +1,53 @@
 # (CRUD) Blog Posts
 
-Full-Stack web application that allows users to create, read, update, and delete blog posts. The application is built using React v16 (with class components and hooks components), OAuth2, SCSS, Redux, Node.js, Express, and MongoDB. 
+Full-Stack web application that allows users to create, read, update, and delete blog posts. The application is built using React v16 (with class components and hooks components), OAuth2, SCSS, Redux, Node.js, Express, and MongoDB.
+
+For both projects you need .env files, I'll provide those files through chat.
 
 - [(CRUD) Blog Posts](#crud-blog-posts)
+  - [Back End](#back-end)
+    - [Getting Started](#getting-started)
   - [Front End](#front-end)
     - [Prerequisites](#prerequisites)
       - [Change Node.js version using nvm](#change-nodejs-version-using-nvm)
       - [Change Node.js version using fnm](#change-nodejs-version-using-fnm)
-    - [Getting Started](#getting-started)
+    - [Getting Started](#getting-started-1)
+
+## Back End
+
+### Getting Started
+
+Open your terminal and navigate to the backend directory of the project:
+
+```bash
+cd back-end
+```
+
+Install the dependencies:
+
+```bash
+npm install
+```
+
+Start the server:
+
+```bash
+npm start
+```
+
+To start the server, you have two options"
+
+1. For a standard start, run:
+
+```bash
+npm run start
+```
+
+2. If you want the server to watch for changes and restart automatically, run:
+
+```bash
+npm run dev
+```
 
 ## Front End
 
