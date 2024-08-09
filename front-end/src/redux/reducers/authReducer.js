@@ -1,6 +1,5 @@
 const initialState = {
   user: null,
-  token: null,
   isAuthenticated: false,
 };
 
@@ -12,17 +11,27 @@ const authReducer = (state = initialState, action) => {
         user: action.payload,
         isAuthenticated: true,
       };
-    case 'SET_TOKEN':
-      return {
-        ...state,
-        token: action.payload,
-      };
     case 'LOGOUT':
       return {
         ...state,
         user: null,
-        token: null,
         isAuthenticated: false,
+      };
+    case 'ADD_USER_TO_FOLLOWING':
+      return {
+        ...state,
+        user: {
+          ...state.user,
+          following: [...state.user.following, action.payload]
+        }
+      };
+    case 'REMOVE_USER_FROM_FOLLOWING':
+      return {
+        ...state,
+        user: {
+          ...state.user,
+          following: state.user.following.filter(userId => userId !== action.payload)
+        }
       };
     default:
       return state;
