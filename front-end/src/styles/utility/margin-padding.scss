@@ -1,0 +1,76 @@
+@function format-number($number) {
+  $number-str: #{ $number };
+  $dot-index: str-index($number-str, '.');
+  @if $dot-index != null and $dot-index > 0 {
+    $formatted-number: str-slice($number-str, 1, $dot-index - 1) + '-' + str-slice($number-str, $dot-index + 1);
+    @return unquote($formatted-number);
+  } @else {
+    @return $number-str;
+  }
+}
+
+$initial-px: 2px;
+$initial-class-number: 0.5;
+$max-px: 300px;
+
+@for $i from 0 through ($max-px / $initial-px) {
+  $class-number: $initial-class-number + ($i * 0.5);
+  $px-value: $initial-px * $i;
+  $formatted-class-number: format-number($class-number);
+
+  .m-#{$formatted-class-number} {
+    margin: $px-value;
+  }
+  .mt-#{$formatted-class-number} {
+    margin-top: $px-value;
+  }
+  .mr-#{$formatted-class-number} {
+    margin-right: $px-value;
+  }
+  .mb-#{$formatted-class-number} {
+    margin-bottom: $px-value;
+  }
+  .ml-#{$formatted-class-number} {
+    margin-left: $px-value;
+  }
+  .mx-#{$formatted-class-number} {
+    margin-left: $px-value;
+    margin-right: $px-value;
+  }
+  .my-#{$formatted-class-number} {
+    margin-top: $px-value;
+    margin-bottom: $px-value;
+  }
+
+  .p-#{$formatted-class-number} {
+    padding: $px-value;
+  }
+  .pt-#{$formatted-class-number} {
+    padding-top: $px-value;
+  }
+  .pr-#{$formatted-class-number} {
+    padding-right: $px-value;
+  }
+  .pb-#{$formatted-class-number} {
+    padding-bottom: $px-value;
+  }
+  .pl-#{$formatted-class-number} {
+    padding-left: $px-value;
+  }
+  .px-#{$formatted-class-number} {
+    padding-left: $px-value;
+    padding-right: $px-value;
+  }
+  .py-#{$formatted-class-number} {
+    padding-top: $px-value;
+    padding-bottom: $px-value;
+  }
+}
+
+.ml-auto {
+  margin-left: auto;
+}
+
+.mr-auto {
+  margin-right: auto;
+}
