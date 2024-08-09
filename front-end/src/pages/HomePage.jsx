@@ -93,7 +93,6 @@ export const HomePage = () => {
         .then((response) => response.json())
         .then((jsonResponse) => {
           if (!jsonResponse.ok) {
-            toast.error(jsonResponse.message)
             return
           }
           setRecommendedUsers(jsonResponse.data)
@@ -109,20 +108,26 @@ export const HomePage = () => {
             <Blog key={blog._id} blog={blog} belongsToAuthenticatedUser={false} />
           ))}
         </section>
-        <div className='pagination'>
-          <button onClick={() => setCurrentPage((prev) => prev - 1)} disabled={currentPage === 1}>
-            Anterior
-          </button>
-          <span>
-            Página {currentPage} de {totalPages}
-          </span>
-          <button
-            onClick={() => setCurrentPage((prev) => prev + 1)}
-            disabled={currentPage === totalPages}
-          >
-            Siguiente
-          </button>
-        </div>
+        {blogs.length === 0 ? (
+          <p className='no-blogs'>
+            There are no blogs to show yet
+          </p>
+        ) : (
+          <div className='pagination'>
+            <button onClick={() => setCurrentPage((prev) => prev - 1)} disabled={currentPage === 1}>
+              Anterior
+            </button>
+            <span>
+              Página {currentPage} de {totalPages}
+            </span>
+            <button
+              onClick={() => setCurrentPage((prev) => prev + 1)}
+              disabled={currentPage === totalPages}
+            >
+              Siguiente
+            </button>
+          </div>
+        )}
       </aside>
       <section>
         <div className='recommended-users mt-10'>
@@ -170,7 +175,9 @@ export const HomePage = () => {
               </div>
             ))}
         </div>
-        <h2 className='recommended-users-title mt-10 mb-4'>Recommended topics</h2>
+        {tags && tags?.length > 0 && (
+          <h2 className='recommended-users-title mt-10 mb-4'>Recommended topics</h2>
+        )}
         <div className='view-blog-tags mb-10'>
           {tags && tags?.map((tag) => <span key={tag._id}>{tag.title}</span>)}
         </div>
