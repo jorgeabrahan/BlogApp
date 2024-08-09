@@ -1,0 +1,36 @@
+.tags-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.tag-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+
+  background-color: map.get($athens-gray, "200");
+  color: map.get($athens-gray, "800");
+
+  padding-inline: 1rem;
+  padding-block: 0.5rem;
+  border-radius: 2rem;
+  font-size: 0.8rem;
+}
+
+.tag-close-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  padding: 0.1rem;
+  transition: background-color 0.2s ease-in-out;
+  cursor: pointer;
+  &:hover {
+    background-color: map.get($athens-gray, "300");
+  }
+}
+
+.tag-close-button svg {
+  color: inherit;
+}

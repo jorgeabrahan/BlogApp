@@ -1,0 +1,150 @@
+.profile-page {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  @media (min-width: 800px) {
+    flex-direction: row;
+  }
+}
+
+.user-blogs {
+  display: grid;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.user-details {
+  max-width: 350px;
+  position: sticky;
+  top: 2rem;
+  height: max-content;
+}
+
+.user__primary {
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding-bottom: 0.2rem;
+}
+
+.user__secondary {
+  font-size: 0.9rem;
+  color: map-get($athens-gray, '700');
+}
+
+.user__header {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.user__stats {
+  display: flex;
+  gap: 1.2rem
+}
+
+.user__numeric {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.user__numeric-value {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.user__numeric-label {
+  font-size: 0.8rem;
+  color: map-get($athens-gray, '700');
+}
+
+.user__description {
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: map-get($athens-gray, '950');
+}
+
+.update-profile-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+}
+
+.update-profile-form__inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.user-name-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.blog-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.blog-author {
+  color: map-get($athens-gray, '700');
+  font-size: 0.875rem;
+}
+.blog-author--link {
+  font-weight: 600;
+  color: map-get($azure-radiance, '700');
+  &:hover {
+    color: map-get($azure-radiance, '600');
+  }
+}
+.blog-title {
+  font-family: 'DM Serif Display', serif;
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1;
+  &:hover {
+    color: map-get($athens-gray, '900');
+    text-decoration: underline;
+  }
+}
+.blog-brief-description {
+  font-size: 0.95rem;
+  line-height: 1.2;
+  color: map-get($athens-gray, '900');
+}
+.blog-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+.blog-stats {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  font-size: 0.875rem;
+}
+.blog-date {
+  color: map-get($athens-gray, '700');
+}
+.blog-likes, .blog-comments {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+  color: map-get($athens-gray, '900');
+}
+.blog-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.no-blogs {
+  font-size: 0.875rem;
+  margin-top: 2rem;
+  text-align: center;
+}

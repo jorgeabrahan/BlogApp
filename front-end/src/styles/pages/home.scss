@@ -1,0 +1,63 @@
+.home-page {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  @media (min-width: 800px) {
+    flex-direction: row;
+  }
+}
+
+.public-blogs {
+  max-width: 800px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 2rem;
+
+  button {
+    margin: 0 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    &:disabled {
+      cursor: not-allowed;
+      opacity: 0.5;
+    }
+  }
+
+  span {
+    margin: 0 10px;
+  }
+}
+
+.recommended-users {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.recommended-user {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  justify-content: space-between;
+}
+.recommended-user__data {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+.user-description {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;  
+  overflow: hidden;
+
+  font-size: 0.875rem;
+  color: map.get($athens-gray, "700");
+}
+.recommended-users-title {
+  font-size: 1rem;
+}
