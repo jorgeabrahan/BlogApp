@@ -25,5 +25,9 @@ app.use('/users', require('./routes/usersRoute'))
 app.use('/tags', require('./routes/tagsRoute'))
 app.use('/blogs', require('./routes/blogRoute'))
 
+app.get('*', (req, res) => {
+  res.status(404).json({ message: '404: NOT_FOUND' });
+});
+
 const PORT = process.env.PORT || 5000
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`))
