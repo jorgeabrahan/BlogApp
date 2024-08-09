@@ -1,11 +1,11 @@
 import React from 'react';
 import { Navbar } from '../components';
 
-export const MainLayout = ({ children }) => {
+export const MainLayout = ({ children, className = '' }) => {
   return (
     <>
       <Navbar />
-      <main>
+      <main className={`layout-delimiter ${className}`}>
         {children}
       </main>
     </>
